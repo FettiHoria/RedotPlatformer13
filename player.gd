@@ -16,7 +16,7 @@ func _physics_process(delta):
 	shooting()
 	dashing()
 	
-	print(velocity.x)
+	#print(velocity.x)
 
 
 func moving(delta):

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://kdnubt4tdymt"]
+[gd_scene load_steps=7 format=3 uid="uid://kdnubt4tdymt"]
 
 [ext_resource type="PackedScene" uid="uid://gosa0js3qyto" path="res://player.tscn" id="1_4qc02"]
 [ext_resource type="Texture2D" uid="uid://b7t1pnkr5u522" path="res://pamant.png" id="2_4wuf8"]
+[ext_resource type="PackedScene" uid="uid://cdpxuwhdxihup" path="res://enemy.tscn" id="3_s02eq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s02eq"]
-size = Vector2(808.5, 38)
+size = Vector2(1058, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wuf8"]
 size = Vector2(176.062, 99.5)
@@ -20,33 +21,35 @@ position = Vector2(252, 196)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(554, 487)
+position = Vector2(596, 597)
 shape = SubResource("RectangleShape2D_s02eq")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(553.5, 486.5)
-scale = Vector2(13.45, 0.616667)
+position = Vector2(598.5, 597)
+scale = Vector2(17.55, 0.616667)
 texture = ExtResource("2_4wuf8")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(774.969, 417)
+position = Vector2(943, 524)
 shape = SubResource("RectangleShape2D_4wuf8")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
-position = Vector2(777, 416.5)
+position = Vector2(942, 523)
 scale = Vector2(2.96667, 1.65)
 texture = ExtResource("2_4wuf8")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(912, 235)
-scale = Vector2(1, 1)
+position = Vector2(1081, 345)
 shape = SubResource("RectangleShape2D_t8dge")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-position = Vector2(912, 232.5)
+position = Vector2(1082, 341)
 scale = Vector2(1.46667, 7.81667)
 texture = ExtResource("2_4wuf8")
+
+[node name="Enemy" parent="." instance=ExtResource("3_s02eq")]
+position = Vector2(686, 479)

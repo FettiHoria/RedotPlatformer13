@@ -16,3 +16,10 @@ func _physics_process(delta):
 
 func _on_timer_timeout():
 	queue_free()
+
+
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if area.get_parent().name == "Enemy":
+		area.get_parent().take_damage(6)
+	
+	#print(area.get_parent())
